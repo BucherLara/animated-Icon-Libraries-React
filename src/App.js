@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import FontAwesome from "./components/FontAwesome";
+import ReactIcons from "./components/ReactIcons";
+import UseAnimation from "./components/UseAnimations";
+import { useState } from "react";
 
 function App() {
+  const [selectedLibrary, setselectedLibrary] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrap">
+      <div>
+        <h2>Best Feather-inspired animated icon libraries for React</h2>
+        <ol>
+          <li onClick={() => setselectedLibrary("FontAwesome")}>
+            Font Awesome
+          </li>
+          <li onClick={() => setselectedLibrary("IconScout")}>IconScout</li>
+          <li onClick={() => setselectedLibrary("ReactIcons")}>
+            React Icons Animated
+          </li>
+          <li onClick={() => setselectedLibrary("UseAnimation")}>
+            React UseAnimation Icons
+          </li>
+          <li onClick={() => setselectedLibrary("LottieFiles")}>LottieFiles</li>
+        </ol>
+
+        {selectedLibrary === "FontAwesome" && <FontAwesome />}
+        {selectedLibrary === "ReactIcons" && <ReactIcons />}
+        {selectedLibrary === "UseAnimation" && <UseAnimation />}
+      </div>
     </div>
   );
 }
