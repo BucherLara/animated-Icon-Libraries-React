@@ -16,7 +16,7 @@ function App() {
           <li onClick={() => setselectedLibrary("FontAwesome")}>
             Font Awesome
           </li>
-          <li onClick={() => setselectedLibrary("Lordicon")}>Lordicon</li>
+
           <li onClick={() => setselectedLibrary("ReactIcons")}>
             React Icons Animated
           </li>
@@ -24,6 +24,7 @@ function App() {
             React UseAnimation Icons
           </li>
           <li onClick={() => setselectedLibrary("LottieFiles")}>LottieFiles</li>
+          <li onClick={() => setselectedLibrary("Lordicon")}>Lordicon</li>
         </ol>
 
         {selectedLibrary === "FontAwesome" && <FontAwesome />}
