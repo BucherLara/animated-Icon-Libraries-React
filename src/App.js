@@ -1,6 +1,6 @@
 import FontAwesome from "./components/FontAwesome";
 import ReactIcons from "./components/ReactIcons";
-import UseAnimation from "./components/UseAnimations";
+import UseAnimations from "./components/UseAnimations";
 import LottieFiles from "./components/LottieFiles";
 import { useState } from "react";
 import Lordicon from "./components/Lordicon";
@@ -20,8 +20,8 @@ function App() {
           <li onClick={() => setselectedLibrary("ReactIcons")}>
             React Icons Animated
           </li>
-          <li onClick={() => setselectedLibrary("UseAnimation")}>
-            React UseAnimation Icons
+          <li onClick={() => setselectedLibrary("UseAnimations")}>
+            React UseAnimations Icons
           </li>
           <li onClick={() => setselectedLibrary("LottieFiles")}>LottieFiles</li>
           <li onClick={() => setselectedLibrary("Lordicon")}>Lordicon</li>
@@ -30,7 +30,7 @@ function App() {
         {selectedLibrary === "FontAwesome" && <FontAwesome />}
         {selectedLibrary === "Lordicon" && <Lordicon />}
         {selectedLibrary === "ReactIcons" && <ReactIcons />}
-        {selectedLibrary === "UseAnimation" && <UseAnimation />}
+        {selectedLibrary === "UseAnimations" && <UseAnimations />}
         {selectedLibrary === "LottieFiles" && <LottieFiles />}
       </div>
     </div>
