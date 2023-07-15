@@ -4,7 +4,7 @@ import github from "react-useanimations/lib/github";
 import lock from "react-useanimations/lib/lock";
 import activity from "react-useanimations/lib/activity";
 
-export default function UseAnimations() {
+export default function UseAnimation() {
   return (
     <div className="wrap">
       <a
